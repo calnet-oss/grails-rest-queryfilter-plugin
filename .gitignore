@@ -1,0 +1,12 @@
+plugin.xml
+target
+.idea
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+.classpath
+.project
+web-app/WEB-INF/tld
+*.zip
+*.sha1
