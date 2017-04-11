@@ -1,1 +1,2 @@
 rootProject.name = 'rest-queryfilter'
+include 'rest-queryfilter-plugin', 'rest-queryfilter-test'
