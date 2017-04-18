@@ -1,4 +1,5 @@
-apply plugin:"org.grails.grails-web"
+apply plugin: 'groovy'
+apply plugin: "org.grails.grails-web"
 
 dependencyManagement {
     imports {
