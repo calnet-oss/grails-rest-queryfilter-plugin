@@ -28,7 +28,7 @@ package rest.queryfilter.plugin
 
 import grails.plugins.*
 
-class RestQueryfilterPluginGrailsPlugin extends Plugin {
+class RestQueryfilterGrailsPlugin extends Plugin {
 
     def grailsVersion = "3.2.5 > *"
     def pluginExcludes = [
