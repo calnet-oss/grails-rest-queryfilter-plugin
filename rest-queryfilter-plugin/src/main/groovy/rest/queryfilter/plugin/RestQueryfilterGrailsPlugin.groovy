@@ -30,7 +30,7 @@ import grails.plugins.*
 
 class RestQueryfilterGrailsPlugin extends Plugin {
 
-    def grailsVersion = "3.2.5 > *"
+    def grailsVersion = "3.3.6 > *"
     def pluginExcludes = [
         "grails-app/views/error.gsp"
     ]

@@ -27,13 +27,6 @@ buildscript {
 apply plugin: 'groovy'
 apply plugin: "org.grails.grails-web"
 
-dependencyManagement {
-    imports {
-        mavenBom "org.grails:grails-bom:$grailsVersion"
-    }
-    applyMavenExclusions false
-}
-
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
@@ -44,11 +37,15 @@ dependencies {
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     runtime "com.h2database:h2"
-    testCompile "org.grails:grails-plugin-testing"
-
+    runtime "org.apache.tomcat:tomcat-jdbc"
+    testCompile "org.grails:grails-gorm-testing-support"
+    testCompile "org.grails:grails-web-testing-support"
     compile pdep(rootProject.restQueryfilterDep)
 }
 
 bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
+    addResources = true
+    String springProfilesActive = 'spring.profiles.active'
+    systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
